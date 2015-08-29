@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+@import "color-schemes";
+
+
+/*****************************************************************/
+/* Theme
+/*****************************************************************/
+$a-color: $theme-3;
+$a-visited: $a-color;
+$a-hover-color: $theme-3;
+
+$nav-color: darken($theme-1, 10%);
+$nav-hover-color: $theme-2;
+
+$text-color: $theme-5;
+$background-color: $theme-1;
+
+$header-bg-image: url('../img/bg.png');
+$header-bg-col1: lighten($theme-4, 10%);
+$header-bg-col2: $theme-5;
+$header-font-col: $theme-1;
+
+$header-hr-color: $header-font-col;
+
+$select-color: black;
+$select-bg-color: transparentize($theme-3, 0.8);
+$header-select-color: $header-font-col;
+
+$tooltip-color: black;
+$tooltip-bg-color: lighten($header-bg-col1, 30%);
+$tooltip-arrow-color: $tooltip-bg-color;
+
+$icon-color: $theme-4;
+$blockquote-color: $theme-2;
+
+/*****************************************************************/
+/* Layout
+/*****************************************************************/
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     0px;
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+$left-margin:      0px;
+
+$header-border-width: 20px;
+
+$title-fadein-base: 0.5s;
+$title-fadein-step: 0.5s;
+
+$tooltip-font-size: 1.2em;
+$tooltip-opacity: 0.95;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "css_reset",
+        "base",
+        "responsive-layout",
+        "responsive-theme"
+;

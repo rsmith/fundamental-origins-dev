@@ -1,0 +1,338 @@
+/*****************************************************************/
+/* Theme
+/*****************************************************************/
+/*****************************************************************/
+/* Layout
+/*****************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #eeeeee;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 0px; }
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block; }
+
+figcaption {
+  font-size: 14px; }
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: 0px; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+strong {
+  font-weight: 600; }
+
+/**
+ * Links
+ */
+a {
+  color: #0085a1;
+  text-decoration: none; }
+  a:active,
+  a:focus,
+  a:visited,
+  a:visited:active,
+  a:visited:focus {
+    color: #0085a1; }
+  a:hover,
+  a:visited:hover {
+    color: #0085a1;
+    text-decoration: underline; }
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: gray;
+  border-left: 4px solid #e6e6e6;
+  padding-left: 0px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background-color: #eef; }
+
+code {
+  padding: 1px 5px; }
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll; }
+  pre > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0; }
+
+/**
+ * Clearfix
+ */
+/**
+ * Icons
+ */
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle; }
+  .icon > svg path {
+    fill: #404040; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1;
+  /* for IE6 and IE7 */ }
+
+.intro-header {
+  background-attachment: scroll;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-bottom: 40px; }
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    text-align: center; }
+    .intro-header .site-heading h1,
+    .intro-header .page-heading h1 {
+      font-size: 50px; }
+    .intro-header .site-heading .subheading,
+    .intro-header .page-heading .subheading {
+      font-size: 24px;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .site-heading h1,
+      .intro-header .page-heading h1 {
+        line-height: 88px;
+        font-size: 80px; } }
+  .intro-header .page-heading,
+  .intro-header .post-heading {
+    padding-top: 150px; }
+    .intro-header .page-heading hr.small,
+    .intro-header .post-heading hr.small {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+  .intro-header .padded-heading {
+    padding-top: 140px !important; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .padded-heading {
+        padding-top: 190px !important;
+        height: 450px; } }
+  .intro-header .site-heading {
+    height: 425px;
+    display: block;
+    font-size: 18px;
+    padding-top: 100px; }
+    @media only screen and (max-width: 390px) {
+      .intro-header .site-heading h1 > .leadingCursor {
+        float: right; } }
+    .intro-header .site-heading h2 {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      margin-bottom: 20px; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .site-heading {
+        height: 450px; } }
+  .intro-header .page-heading {
+    height: 300px;
+    padding-top: 80px; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .page-heading {
+        padding-top: 150px;
+        height: 450px; } }
+  .intro-header .post-heading {
+    padding-bottom: 50px;
+    text-align: left;
+    padding-top: 70px; }
+    .intro-header .post-heading h1 {
+      font-size: 35px !important; }
+    .intro-header .post-heading .subheading,
+    .intro-header .post-heading .meta {
+      line-height: 1.1;
+      display: block; }
+    .intro-header .post-heading .subheading {
+      font-size: 24px;
+      margin: 10px 0 30px; }
+    .intro-header .post-heading .meta {
+      font-size: 20px; }
+    @media only screen and (min-width: 768px) {
+      .intro-header .post-heading {
+        height: 450px;
+        padding-top: 150px; }
+        .intro-header .post-heading h1 {
+          font-size: 55px; }
+        .intro-header .post-heading .subheading {
+          font-size: 30px; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800; }
+
+.intro-header {
+  background: url("../img/bg.png");
+  background-color: #0d0d0d; }
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    color: #eeeeee; }
+  .intro-header .site-heading h2,
+  .intro-header .page-heading h2 {
+    color: #b3b3b3; }
+  .intro-header .site-heading h1.live-input,
+  .intro-header .site-heading h2.live-input,
+  .intro-header .page-heading h1.live-input,
+  .intro-header .page-heading h2.live-input {
+    border: 1px solid transparent;
+    -webkit-transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
+            transition: border 0.2s ease-out, box-shadow 0.2s ease-out; }
+  .intro-header .site-heading h1.live-input:focus,
+  .intro-header .site-heading h1.live-input:hover,
+  .intro-header .page-heading h1.live-input:focus,
+  .intro-header .page-heading h1.live-input:hover {
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px 0px #5a5a5a, -1px -1px 10px 0px #5a5a5a; }
+  .intro-header .site-heading h2.live-input:focus,
+  .intro-header .site-heading h2.live-input:hover,
+  .intro-header .page-heading h2.live-input:focus,
+  .intro-header .page-heading h2.live-input:hover {
+    border: 1px solid #5a5a5a;
+    box-shadow: 1px 1px 10px 0px black, -1px -1px 10px 0px black; }
+  .intro-header .site-heading .bstooltip + .tooltip.top,
+  .intro-header .site-heading .bstooltip + .tooltip.left,
+  .intro-header .page-heading .bstooltip + .tooltip.top,
+  .intro-header .page-heading .bstooltip + .tooltip.left {
+    opacity: 0.95; }
+  .intro-header .site-heading .bstooltip + .tooltip.top > .tooltip-arrow,
+  .intro-header .page-heading .bstooltip + .tooltip.top > .tooltip-arrow {
+    border-top-color: #a6a6a6; }
+  .intro-header .site-heading .bstooltip + .tooltip.left > .tooltip-arrow,
+  .intro-header .page-heading .bstooltip + .tooltip.left > .tooltip-arrow {
+    border-left-color: #a6a6a6; }
+  .intro-header .site-heading .bstooltip + .tooltip > .tooltip-inner,
+  .intro-header .page-heading .bstooltip + .tooltip > .tooltip-inner {
+    font-size: 1.2em;
+    color: black;
+    background-color: #a6a6a6; }
+  .intro-header .site-heading .live-input:focus,
+  .intro-header .page-heading .live-input:focus {
+    outline: none; }
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500; }
+  .intro-header .post-heading h1 {
+    font-size: 40px;
+    color: #d4d4d4; }
+  .intro-header .post-heading h2 {
+    color: gray; }
+  .intro-header .post-heading .subheading {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600; }
+  .intro-header .post-heading .meta {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: 300; }
+    .intro-header .post-heading .meta a {
+      color: #0085a1; }

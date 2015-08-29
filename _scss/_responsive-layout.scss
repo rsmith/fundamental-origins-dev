@@ -1,0 +1,121 @@
+@import "mixins";
+
+// Header
+.intro-header {
+    background-attachment: scroll;
+    @include background-cover();
+
+    margin-bottom: 40px;
+
+    .site-heading,
+    .page-heading {
+        text-align: center;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .subheading {
+            font-size: 24px;
+            line-height: 1.1;
+            display: block;
+            margin: 10px 0 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            h1 {
+                line-height: 88px;
+                font-size: 80px;
+            }
+        }
+    }
+
+    .page-heading,
+    .post-heading {
+        padding-top: 150px;
+
+        hr.small {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .padded-heading {
+        padding-top: 140px !important;
+
+        @media only screen and (min-width: 768px) {
+            padding-top: 190px !important;
+            height: 450px;
+        }
+    }
+
+    .site-heading {
+        height: 425px;
+        display: block;
+        font-size: 18px;
+        padding-top: 100px;
+
+        h1 {
+            @media only screen and (max-width: 390px) {
+                > .leadingCursor {
+                    float: right;
+                }
+            }
+        }
+
+        h2 {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            height: 450px;
+        }
+    }
+
+    .page-heading {
+        height: 300px;
+        padding-top: 80px;
+
+        @media only screen and (min-width: 768px) {
+            padding-top: 150px;
+            height: 450px;
+        }
+    }
+
+    .post-heading {
+        padding-bottom: 50px;
+        text-align: left;
+        padding-top: 70px;
+
+        h1 {
+            font-size: 35px !important;
+        }
+
+        .subheading,
+        .meta {
+            line-height: 1.1;
+            display: block;
+        }
+
+        .subheading {
+            font-size: 24px;
+            margin: 10px 0 30px;
+        }
+
+        .meta {
+            font-size: 20px;
+        }
+        @media only screen and (min-width: 768px) {
+            height: 450px;
+            padding-top: 150px;
+            h1 {
+                font-size: 55px;
+            }
+            .subheading {
+                font-size: 30px;
+            }
+        }
+    }
+}

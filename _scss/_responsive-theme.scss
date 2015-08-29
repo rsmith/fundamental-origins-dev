@@ -1,0 +1,97 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include sans-serif();
+    font-weight: 800;
+}
+
+// Header
+.intro-header {
+    background: $header-bg-image;
+    background-color: darken($theme-4, 20%);
+    .site-heading,
+    .page-heading {
+        h1 {
+            color: $theme-1;
+        }
+
+        h2 {
+            color: lighten($theme-2, 20%);
+        }
+
+        h1.live-input,
+        h2.live-input {
+            border: 1px solid rgba(0, 0, 0 ,0);
+            transition: border 0.2s ease-out,
+            box-shadow 0.2s ease-out;
+        }
+
+        h1.live-input:focus,
+        h1.live-input:hover {
+            border: 1px solid $header-bg-col2;
+            box-shadow: 1px 1px 10px 0px $header-bg-col1,
+            -1px -1px 10px 0px $header-bg-col1;
+        }
+
+        h2.live-input:focus,
+        h2.live-input:hover {
+            border: 1px solid $header-bg-col1;
+            box-shadow: 1px 1px 10px 0px $header-bg-col2,
+            -1px -1px 10px 0px $header-bg-col2;
+        }
+
+        .bstooltip + .tooltip.top,
+        .bstooltip + .tooltip.left {
+            opacity: $tooltip-opacity;
+        }
+
+        .bstooltip + .tooltip.top > .tooltip-arrow {
+            border-top-color: $tooltip-arrow-color;
+        }
+        .bstooltip + .tooltip.left > .tooltip-arrow {
+            border-left-color: $tooltip-arrow-color;
+        }
+
+        .bstooltip + .tooltip > .tooltip-inner {
+            font-size: $tooltip-font-size;
+            color: $tooltip-color;
+            background-color: $tooltip-bg-color;
+        }
+
+        .live-input:focus {
+            outline: none;
+        }
+
+        .subheading {
+            @include sans-serif();
+            font-weight: 500;
+        }
+    }
+
+    .post-heading {
+        h1 {
+            font-size: 40px;
+            color: darken($theme-1, 10%);
+        }
+
+        h2 {
+            color: $theme-2;
+        }
+        .subheading {
+            @include sans-serif();
+            font-weight: 600;
+        }
+
+        .meta {
+            @include sans-serif();
+            font-style: italic;
+            font-weight: 300;
+            a {
+                color: $a-color;
+            }
+        }
+    }
+}

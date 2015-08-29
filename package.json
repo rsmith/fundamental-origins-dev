@@ -1,0 +1,26 @@
+{
+  "name": "jekyll-gulp-haml-sass-browsersync",
+  "description": "",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "browser-sync": "2.7.13",
+    "gulp-sass": "2.0.3",
+    "gulp-ruby-haml": "0.0.4",
+    "gulp-watch": "~4.2.4",
+    "gulp-jekyll": "0.0.0",
+    "gulp-task": "~2.0.2",
+    "run-sequence": "~1.1.0",
+    "gulp-autoprefixer": "~2.3.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-rename": "~1.2.2",
+    "stream-combiner2": "~1.0.2"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

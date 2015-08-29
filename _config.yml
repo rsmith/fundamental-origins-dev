@@ -1,24 +1,27 @@
 # Site settings
-author: My Name
-subheading: One-liner summary of myself
-title: Jekyll Gulp Haml Sass BrowserSync
-brand: Awesome Brand
-email: me@mydomain.whatever
+author: Robin Smith
+subtitle: Freelance web & mobile developer.
+title: Robin Smith - Freelance Developer
+brand: Robin Smith
+email: robin@rsmith.io
 description: > # this means to ignore newlines until "baseurl:"
-  My site description
+  Experienced freelance software developer designing and building custom web applications and integrations using modern
+  cloud technologies and frameworks.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://mydomain   # with the https protocol
-enforce_ssl: mydomain   # without any protocol
-github: github_user
-twitter: twitter_user
-linkedin: linkedin_user
-permalink: /blog/:title
-paginate_path: "/blog/page/:num"
-paginate: 50
+url: https://rsmith.io   # with the https protocol
+enforce_ssl: rsmith.io   # without any protocol
+github: robinrob
+twitter: rsmith_io
+linkedin: rsmithio
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
+# Allow /index route in place of /index.html etc
+permalink: /blog/:title
+
+paginate_path: "/blog/page/:num"
+paginate: 5
 # Excludes these files/folders from being included into Jekyll _site folder.
 # Note that you can also name files with a leading underscore to exclude them e.g.: _README.md
 exclude: [node_modules, gulpfile.js, README.md, package.json, Gemfile, Gemfile.lock]

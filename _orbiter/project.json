@@ -1,0 +1,13 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 1,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d", "chipmunk"],
+
+    "jsList" : ["game.js"]
+}

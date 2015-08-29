@@ -3,21 +3,27 @@
 
 @import "color-schemes";
 
+/*****************************************************************/
+/* Base colors (non-themed) */
+/*****************************************************************/
+$grey-color:       #828282;
+$gray-dark: lighten(black, 25%);
+$white: white;
+$gray-light: #eee;
 
 /*****************************************************************/
-/* Theme
+/* Colors (themed) */
 /*****************************************************************/
 $a-color: $theme-3;
 $a-visited: $a-color;
-$a-hover-color: $theme-3;
+$a-hover-color: $a-color;
 
 $nav-color: darken($theme-1, 10%);
 $nav-hover-color: $theme-2;
 
 $text-color: $theme-5;
-$background-color: $theme-1;
+$background-color: white;
 
-$header-bg-image: url('../img/bg.png');
 $header-bg-col1: lighten($theme-4, 10%);
 $header-bg-col2: $theme-5;
 $header-font-col: $theme-1;
@@ -32,18 +38,26 @@ $tooltip-color: black;
 $tooltip-bg-color: lighten($header-bg-col1, 30%);
 $tooltip-arrow-color: $tooltip-bg-color;
 
-$icon-color: $theme-4;
-$blockquote-color: $theme-2;
+$photo-edge-color: $theme-2;
 
-/*****************************************************************/
-/* Layout
-/*****************************************************************/
+$media-icon-col: $theme-4;
+$media-icon-hover-col: $theme-3;
+
+$icon-color: $grey-color;
+$blockquote-color: $theme-5;
+
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     0px;
+$article-font-size: 20px;
+$code-font: Consolas, Monaco, 'Andale Mono', monospace;
+$code-font-size: 16px;
+$inline-code-font-size: 18px;
+$inline-code-font-color: darken($theme-3, 5%);
+
+$spacing-unit:     40px;
 // Width of the content area
 $content-width:    800px;
 
@@ -53,12 +67,25 @@ $left-margin:      0px;
 
 $header-border-width: 20px;
 
+$header-bg-image: url('../img/bg.png');
+
+$image-height: 120px;
+$project-photo-size: 200px;
+$endorser-photo-size: 100px;
+
 $title-fadein-base: 0.5s;
 $title-fadein-step: 0.5s;
 
 $tooltip-font-size: 1.2em;
 $tooltip-opacity: 0.95;
 
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;

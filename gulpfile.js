@@ -220,7 +220,7 @@ gulp.task('fast-dev-build', function (done) {
 gulp.task('upload', function () {
     return gulp.src(config.paths.build)
         .pipe(ghPages({
-            branch: 'master'
+            branch: 'gh-pages'
         }))
 })
 

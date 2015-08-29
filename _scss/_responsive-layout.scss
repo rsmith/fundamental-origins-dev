@@ -1,5 +1,107 @@
 @import "mixins";
 
+/* Slight overflow occurs on small screens because i told the header h1 not to wrap on whitespace. */
+html, body {
+    overflow-x: hidden;
+}
+
+pre, code{
+    margin: 0;
+    padding: 0;
+}
+
+hr.small {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-width: 4px;
+}
+
+hr.large {
+    max-width: 60%;
+    margin: 50px auto;
+    border-width: 6px;
+}
+
+/* Center the nav links within nav list */
+.navbar-nav {
+    text-align: center;
+    li {
+        float: none;
+        display: inline-block
+    }
+}
+/* Center the nav list in collapsed navbar */
+.navbar-collapse {
+    li {
+        display: block;
+    }
+    .navbar-nav {
+        float: none;
+    }
+}
+
+// Navigation
+.navbar-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    .nav {
+        li {
+            a {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .nav {
+            li {
+                display: inline-block;
+                a {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 1170px) {
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        //&.is-fixed {
+        //    /* when the user scrolls down, we hide the header right above the viewport */
+        //    position: fixed;
+        //    top: -61px;
+        //    background-color: opacify(white, 0.9);
+        //    border-bottom: 1px solid darken(white, 5%);
+        //    -webkit-transition: -webkit-transform 0.3s;
+        //    -moz-transition: -moz-transform 0.3s;
+        //    transition: transform 0.3s;
+        //}
+        //&.is-visible {
+        //    /* if the user changes the scrolling direction, we show the header */
+        //    -webkit-transform: translate3d(0, 100%, 0);
+        //    -moz-transform: translate3d(0, 100%, 0);
+        //    -ms-transform: translate3d(0, 100%, 0);
+        //    -o-transform: translate3d(0, 100%, 0);
+        //    transform: translate3d(0, 100%, 0);
+        //}
+
+        .nav {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
 // Header
 .intro-header {
     background-attachment: scroll;
@@ -54,12 +156,19 @@
         display: block;
         font-size: 18px;
         padding-top: 100px;
+        margin-bottom: 0;
 
         h1 {
+            white-space: nowrap;
+
             @media only screen and (max-width: 390px) {
                 > .leadingCursor {
                     float: right;
                 }
+            }
+
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 30px;
             }
         }
 
@@ -67,6 +176,17 @@
             padding-top: 8px !important;
             padding-bottom: 8px !important;
             margin-bottom: 20px;
+        }
+
+        .photo {
+            margin-bottom: 0px;
+            display: inline-block;
+            text-align: center;
+            width: $image-height;
+            height: $image-height;
+            @media only screen and (min-width: 768px) {
+                margin-bottom: 10px;
+            }
         }
 
         @media only screen and (min-width: 768px) {
@@ -90,7 +210,8 @@
         padding-top: 70px;
 
         h1 {
-            font-size: 35px !important;
+            font-size: 45px !important;
+            margin-bottom: 1em;
         }
 
         .subheading,
@@ -117,5 +238,280 @@
                 font-size: 30px;
             }
         }
+    }
+}
+
+.main {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        text-align: left;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    ul, li {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: justify;
+        margin: 5px 0 $spacing-unit 0;
+        padding: 0;
+    }
+
+    // Button Styles
+    .btn {
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 15px 25px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+        padding: 25px 35px;
+    }
+
+    .btn-submit {
+        text-align: left;
+    }
+
+    .index {
+        text-align: center;
+
+        .blurb {
+            p {
+                font-size: 18px;
+                display: inline-block;
+                max-width: 900px;
+                margin-bottom: 40px;
+            }
+
+            hr.large {
+                max-width: 90%;
+            }
+        }
+
+        .section {
+            > .container {
+                max-width: 900px;
+            }
+            padding: 0;
+            padding-top: 3%;
+            //padding-bottom: 3%;
+
+            .intro {
+                > p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+
+        .projects {
+            ul {
+                li {
+                    &:before {
+                        display: inline-block;
+                        float: right;
+                        width: $project-photo-size;
+                        height: $project-photo-size;
+                        margin-left: 3%;
+
+                        @media only screen and (max-width: 1170px) {
+                            zoom: 0.90;
+                        }
+
+                        @media only screen and (max-width: 768px) {
+                            float: left !important;
+                            margin-left: 20%;
+                            margin-top: 0%;
+                            margin-bottom: 2%;
+                            height: $project-photo-size !important;
+                        }
+                    }
+                    @media only screen and (max-width: 768px) {
+                        h3 {
+                            clear: both;
+                        }
+                        p {
+                            margin-bottom: 10%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .endorsement {
+            text-align: center;
+            margin-bottom: 8%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            > a {
+                > .endorsement-photo {
+                    display: inline-block;
+                    text-align: center;
+                    width: $endorser-photo-size;
+                    height: $endorser-photo-size;
+                    margin-bottom: 5px;
+                }
+            }
+
+            > blockquote {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            > .caption {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .blog {
+        display: inline-block;
+        text-align: left;
+
+        h2 {
+            margin-top: 0 !important;
+        }
+
+        .post-preview {
+            a {
+                > .post-title {
+                    font-size: 30px;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+                > .post-subtitle {
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+            .post-meta {
+                font-size: 18px;
+                margin-top: 0;
+            }
+            @media only screen and (min-width: 768px) {
+                > a {
+                    > .post-title {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+        // Sections
+        .section-heading {
+            font-size: 36px;
+            margin-top: 60px;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            margin: 0;
+            display: block;
+        }
+
+        // Pager Styling
+        .pager {
+            margin: 20px 0 0;
+
+            li {
+                > a,
+                > span {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    padding: 10px 5px;
+                    @media only screen and (min-width: 768px) {
+                        font-size: 14px;
+                        padding: 15px 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        max-width: 600px;
+
+        p {
+            font-size: 18px;
+        }
+
+        .floating-label-form-group {
+            font-size: 14px;
+            position: relative;
+            margin-bottom: 0;
+            padding-bottom: 0.5em;
+            input,
+            textarea {
+                z-index: 1;
+                position: relative;
+                padding-right: 0;
+                padding-left: 0;
+                font-size: 1.5em;
+                resize: none;
+            }
+            label {
+                display: block;
+                z-index: 0;
+                position: relative;
+                top: 2em;
+                margin: 0;
+                font-size: 0.85em;
+                line-height: 1.764705882em;
+                vertical-align: middle;
+                vertical-align: baseline;
+            }
+            &::not(:first-child) {
+                padding-left: 14px;
+            }
+            .help-block {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .floating-label-form-group-with-value {
+            label {
+                top: 0;
+            }
+        }
+
+        .control-group {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+footer {
+    font-size: 20px;
+    padding: 50px 0 65px;
+    .list-inline {
+        margin: 0;
+        padding: 0;
+    }
+    .copyright {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 0;
     }
 }
